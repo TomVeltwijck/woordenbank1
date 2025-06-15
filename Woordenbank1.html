@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactief Prentenblad</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 30px;
+    }
+    .item {
+      text-align: center;
+      cursor: pointer;
+    }
+    .item img {
+      max-width: 120px;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      transition: transform 0.2s;
+    }
+    .item img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Wat zie je?</h1>
+  <div class="grid">
+    <div class="item" onclick="speak('kat')">
+      <img src="kat.png" alt="Kat" />
+      <p>Kat</p>
+    </div>
+    <div class="item" onclick="speak('tak')">
+      <img src="tak.png" alt="Tak" />
+      <p>Tak</p>
+    </div>
+    <div class="item" onclick="speak('zak')">
+      <img src="zak.png" alt="zak" />
+      <p>zak</p>
+    </div>
+    <div class="item" onclick="speak('wat')">
+      <img src="wat.png" alt="wat" />
+      <p>wat</p>
+    </div>
+    <div class="item" onclick="speak('was')">
+      <img src="was.png" alt="was" />
+      <p>was</p>
+    </div>
+    <div class="item" onclick="speak('zit')">
+      <img src="zit.png" alt="zit" />
+      <p>zit</p>
+    </div>
+    <div class="item" onclick="speak('mik')">
+      <img src="mik.png" alt="mik" />
+      <p>mik</p>
+    </div>
+    <div class="item" onclick="speak('mis')">
+      <img src="mis.png" alt="mis" />
+      <p>mis</p>
+    </div>
+    <div class="item" onclick="speak('kip')">
+      <img src="kip.png" alt="kip" />
+      <p>kip</p>
+    </div>
+    <div class="item" onclick="speak('pit')">
+      <img src="pit.png" alt="pit" />
+      <p>pit</p>
+    </div>
+    <div class="item" onclick="speak('put')">
+      <img src="put.png" alt="put" />
+      <p>put</p>
+    </div>
+    <div class="item" onclick="speak('bus')">
+      <img src="bus.png" alt="bus" />
+      <p>bus</p>
+    </div>
+    <div class="item" onclick="speak('mus')">
+      <img src="mus.png" alt="mus" />
+      <p>mus</p>
+    </div>
+    <div class="item" onclick="speak('kus')">
+      <img src="kus.png" alt="kus" />
+      <p>kus</p>
+    </div>
+    <div class="item" onclick="speak('buk')">
+      <img src="buk.png" alt="buk" />
+      <p>buk</p>
+    </div>
+    <div class="item" onclick="speak('web')">
+      <img src="web.png" alt="web" />
+      <p>web</p>
+    </div>
+    <div class="item" onclick="speak('bes')">
+      <img src="bes.png" alt="bes" />
+      <p>bes</p>
+    </div>    
+    <div class="item" onclick="speak('mep')">
+      <img src="mep.png" alt="mep" />
+      <p>mep</p>
+    </div>
+    <div class="item" onclick="speak('bek')">
+      <img src="bek.png" alt="bek" />
+      <p>bek</p>
+    </div>
+    <div class="item" onclick="speak('top')">
+      <img src="top.png" alt="top" />
+      <p>top</p>
+    </div>
+    <div class="item" onclick="speak('pot')">
+      <img src="pot.png" alt="pot" />
+      <p>pot</p>
+    </div>
+    <div class="item" onclick="speak('bos')">
+      <img src="bos.png" alt="bos" />
+      <p>bos</p>
+    </div>
+    <div class="item" onclick="speak('bos')">
+      <img src="bos.png" alt="bos" />
+      <p>bos</p>
+    </div>    
+    <div class="item" onclick="speak('pet')">
+      <img src="pet.png" alt="Pet" />
+      <p>Pet</p>
+    </div>
+  </div>
+
+  <script>
+    function speak(word) {
+      const msg = new SpeechSynthesisUtterance(word);
+      msg.lang = 'nl-NL';
+      window.speechSynthesis.speak(msg);
+    }
+  </script>
+
+</body>
+</html>
