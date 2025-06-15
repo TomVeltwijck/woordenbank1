@@ -128,7 +128,7 @@
     function speak(word) {
       const msg = new SpeechSynthesisUtterance(word);
       msg.lang = 'nl-NL';
-      msg.rate = 0.5;
+      msg.rate = 0.1;
       window.speechSynthesis.speak(msg);
     }
   </script>
